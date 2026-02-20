@@ -7,14 +7,6 @@ class Ethernity < Formula
   sha256 "14d1fb117e3b433ae0f377a5b755305a337de92ca8f2a1bcb073f84876aba066"
   license "GPL-3.0-or-later"
 
-  bottle do
-    root_url "https://github.com/MinorGlitch/homebrew-ethernity/releases/download/ethernity-v0.2.2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bdc60dd64c8eaf9376c13f26ba1202a083a53d295e4064e500f2739515c5511d"
-    sha256 cellar: :any_skip_relocation, sequoia: "577be807d46679f3bad671f39d5d757b2469e43a645318836506876cb21ea711"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c42a794ab3e609f0d92fe8add59dda73757f4ea3988488f05b121bab971eebdd"
-  end
-
-
   depends_on "pkgconf" => :build
   depends_on "pillow"
   depends_on "python@3.13"
