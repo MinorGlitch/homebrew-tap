@@ -4,16 +4,8 @@ class Ethernity < Formula
   desc "Secure, offline-recoverable backup system with QR-based recovery documents"
   homepage "https://github.com/MinorGlitch/ethernity"
   url "https://github.com/MinorGlitch/ethernity/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "3e864a87ac2ea7f3ade10e82d30050e1d31e2d92bfb1b7952cf2430411a07972"
+  sha256 "99a1026601efb213a240fc19c229f26252d26785eb83db06007a80eaf7ea6f0a"
   license "GPL-3.0-or-later"
-
-  bottle do
-    root_url "https://github.com/minorglitch/homebrew-tap/releases/download/ethernity-v0.9.1"
-    sha256 cellar: :any, arm64_sonoma: "93054a3f4d1726ec31c085e7f14e6825f5d895721c0dd408562246ffa4b79b54"
-    sha256 cellar: :any, sequoia: "3375d40b71294eefdc7eb799c0b8362c77ba25aa8dba1f9b49d79a841dedd4cc"
-    sha256 cellar: :any, x86_64_linux: "becaa8338787767e4413bf40143a87ab0839d5fe121777c45c78e0f0777deccc"
-  end
-
 
   depends_on "pkgconf" => :build
   depends_on "pillow"
@@ -168,6 +160,11 @@ class Ethernity < Formula
   resource "segno" do
     url "https://files.pythonhosted.org/packages/d6/02/12c73fd423eb9577b97fc1924966b929eff7074ae6b2e15dd3d30cb9e4ae/segno-1.6.6-py3-none-any.whl"
     sha256 "28c7d081ed0cf935e0411293a465efd4d500704072cdb039778a2ab8736190c7"
+  end
+
+  resource "annotated-doc" do
+    url "https://files.pythonhosted.org/packages/1e/d3/26bf1008eb3d2daa8ef4cacc7f3bfdc11818d111f7e2d0201bc6e3b49d45/annotated_doc-0.0.4-py3-none-any.whl"
+    sha256 "571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320"
   end
 
   resource "typer" do
