@@ -4,7 +4,7 @@ class Ethernity < Formula
   desc "Secure, offline-recoverable backup system with QR-based recovery documents"
   homepage "https://github.com/MinorGlitch/ethernity"
   url "https://github.com/MinorGlitch/ethernity/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "20386ed7847b01298b43f7cbe653b09f98be77fa0b6a0569c09c0bad54382efc"
+  sha256 "9efc1b94b7c8736505359143dee5ffa0e4b641fadcbdc2d8f5a96c13d97457c5"
   license "GPL-3.0-or-later"
 
   depends_on "pkgconf" => :build
