@@ -4,7 +4,7 @@ class Ethernity < Formula
   desc "Secure, offline-recoverable backup system with QR-based recovery documents"
   homepage "https://github.com/MinorGlitch/ethernity"
   url "https://github.com/MinorGlitch/ethernity/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "77a335bffd7e7bde9adb6f9a8839e20d9b26534b2a0e87afc29956dec32a8c10"
+  sha256 "20386ed7847b01298b43f7cbe653b09f98be77fa0b6a0569c09c0bad54382efc"
   license "GPL-3.0-or-later"
 
   depends_on "pkgconf" => :build
@@ -200,7 +200,10 @@ class Ethernity < Formula
     resources.each do |resource|
       if resource.url&.end_with?(".whl")
         resource.fetch
-        venv.pip_install resource.cached_download
+        wheel_name = File.basename(resource.url)
+        wheel_path = buildpath/wheel_name
+        cp resource.cached_download, wheel_path
+        venv.pip_install wheel_path
       else
         resource.stage do
           venv.pip_install Pathname.pwd
