@@ -3,16 +3,9 @@ class Ethernity < Formula
 
   desc "Secure, offline-recoverable backup system with QR-based recovery documents"
   homepage "https://github.com/MinorGlitch/ethernity"
-  url "https://github.com/MinorGlitch/ethernity/archive/refs/tags/v0.9.9.tar.gz"
-  sha256 "67e7df9b9f109f1e5637d75ae398ee738d9c652aa242ddf8adcd2183bbce990e"
+  url "https://github.com/MinorGlitch/ethernity/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "7a6f8bcc6355ed90cfc85d229c23a93a928830ae8a3f146fb8004616b49b10da"
   license "GPL-3.0-or-later"
-
-  bottle do
-    root_url "https://github.com/minorglitch/homebrew-tap/releases/download/ethernity-v0.9.9"
-    sha256 cellar: :any, arm64_sonoma: "61e69efcfa4639358408b6961daddc902ddee31b4a2ca89867cbb22e53cac568"
-    sha256 cellar: :any, sequoia:      "1d70afe919b91314c423e69524321c1e83ac276262895b722d49484c9421089a"
-    sha256 cellar: :any, x86_64_linux: "af2fc4b0b4c4239fb92d98508d4b126a4a4c76325db8f0de9e1fd01103c2eee8"
-  end
 
   depends_on "pkgconf" => :build
   depends_on "pillow"
